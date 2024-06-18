@@ -18,11 +18,11 @@ module.exports = {
       cedula: {
         type: Sequelize.INTEGER
       },
-      departamento: {
-        type: Sequelize.STRING
+      departamento_id: {
+        type: Sequelize.INTEGER
       },
-      puesto: {
-        type: Sequelize.STRING
+      puesto_id: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
