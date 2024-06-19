@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
     try {
         const nuevoEmpleado = await EmpleadoController.CreateEmpleado(req.body);
-        res.status(201).send(nuevoEmpleado);
+        res.status(200).send(nuevoEmpleado);
     } catch (err) {
         res.status(500).send(err);
     }
