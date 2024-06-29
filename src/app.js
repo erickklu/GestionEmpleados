@@ -9,6 +9,7 @@ app.use(express.json());
 app.use("/departamentos", routes.DepartamentoRoutes)
 app.use("/puestos", routes.PuestoRoutes)
 app.use("/empleados", routes.EmpleadoRoutes)
+app.use("/auth", routes.UserRoutes)
 
 app.listen(port, () => {
     console.log("Server Online", port)
