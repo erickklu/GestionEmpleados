@@ -8,7 +8,7 @@
 ## Configuración y Ejecución
 
 1. Clona el repositorio:
-   git clone https://github.com/tu_usuario/gestionempleados.git
+   git clone https://github.com/erickklu/GestionEmpleados.git
 
 2. Instalar dependencias:
    npm install
