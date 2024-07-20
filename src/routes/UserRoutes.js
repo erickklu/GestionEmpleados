@@ -12,12 +12,6 @@ router.post("/register", async (req, res) => {
         res.status(201).send(`Usuario ${name} registrado correctamente. ID: ${response.id}`);
 });
 
-/* router.post("/login", async (req, res) => {
-    const { username, password } = req.body;
-    let user = await UserController.FindUserByEmail({username,password})
-    res.status(201).send(user)
-}); */
-
 router.post("/login", async (req, res) => {
     const { username, password } = req.body;
     let pass = await UserController.FindUserByEmail({username,password})
@@ -29,8 +23,6 @@ router.post("/login", async (req, res) => {
         res.status(401).send('Usuario o contraseña incorrectos')
     }
 
-    /* res.status(201).send(user) */
 });
-
 
 module.exports = router;

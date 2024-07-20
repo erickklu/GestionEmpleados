@@ -2,7 +2,6 @@ const bcrypt = require('bcrypt');
 const db = require("../db/models")
 const model = require("../db/models/user")(db.sequelize, db.Sequelize)
 
-
 module.exports.CreateUser = async (data) => {
     const res = await model.create({
         name: data.name,
@@ -25,8 +24,5 @@ module.exports.FindUserByEmail = async (data) => {
         console.log(pass);
         return pass;
     }
-
-
-
     return false;
 }
