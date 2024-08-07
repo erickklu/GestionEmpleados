@@ -32,11 +32,14 @@ router.get("/login/google", (req, res) => {
             response_type: 'code',
             scope: 'openid profile email',
         });
+
+        
     res.redirect(authorizationUrl);
 });
 
 router.get("/callback", async (req, res) => {
     const { code } = req.query;
+    
 
     try {
         const tokenResponse = await axios.post('https://oauth2.googleapis.com/token', {
@@ -46,6 +49,8 @@ router.get("/callback", async (req, res) => {
             code,
             grant_type: 'authorization_code',
         });
+
+        
 
         const { access_token, id_token } = tokenResponse.data;
 
